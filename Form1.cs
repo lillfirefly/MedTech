@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.Configuration;
 
 
 namespace output
@@ -12,6 +13,7 @@ namespace output
         public Form1()
         {
             InitializeComponent();
+            var ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         }
 
         private void Form1_Load(object sender, EventArgs e)
